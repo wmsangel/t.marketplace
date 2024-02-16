@@ -1,0 +1,224 @@
+@@include('../partials/header.html')
+
+<div class="wrapper">
+    <div class="horizontal-filter">
+        <div class="horizontal-filter__left">
+            <div class="range-block">
+                <div class="range-block__title">Price Range</div>
+                <div class="range-block-line" id="js-price-range"></div>
+                <div class="range-block__inputs">
+                    <div class="range-block__inputs-from">
+                        <input type="text" id="js-price-range-from">
+                    </div>
+                    <div class="range-block__inputs-to">
+                        <input type="text" id="js-price-range-to">
+                    </div>
+                </div>
+            </div>
+
+            <div class="range-block">
+                <div class="range-block__title">ТНС, %</div>
+                <div class="range-block-line" id="js-thc-range"></div>
+                <div class="range-block__inputs">
+                    <div class="range-block__inputs-from"></div>
+                    <div class="range-block__inputs-to">
+                        <input type="text" id="js-thc-range-to">
+                    </div>
+                </div>
+            </div>
+
+            <div class="range-block">
+                <div class="range-block__title">CBD, %</div>
+                <div class="range-block-line" id="js-cbd-range"></div>
+                <div class="range-block__inputs">
+                    <div class="range-block__inputs-from"></div>
+                    <div class="range-block__inputs-to">
+                        <input type="text" id="js-cbd-range-to">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nose-block">
+                <div class="nose-block__title">Nose</div>
+                <div class="nose-block__radio-group">
+                    <label for="nose-1" data-radio-id="nose-1" class="js-nose-radio"></label>
+                    <label for="nose-2" data-radio-id="nose-2" class="js-nose-radio"></label>
+                    <label for="nose-3" data-radio-id="nose-3" class="js-nose-radio"></label>
+                    <label for="nose-4" data-radio-id="nose-4" class="js-nose-radio"></label>
+                    <label for="nose-5" data-radio-id="nose-5" class="js-nose-radio"></label>
+                    <label for="nose-6" data-radio-id="nose-6" class="js-nose-radio"></label>
+                    <label for="nose-7" data-radio-id="nose-7" class="js-nose-radio"></label>
+                    <label for="nose-8" data-radio-id="nose-8" class="js-nose-radio"></label>
+                    <label for="nose-9" data-radio-id="nose-9" class="js-nose-radio"></label>
+                    <label for="nose-10" data-radio-id="nose-10" class="js-nose-radio"></label>
+                    <div class="nose-block__radio-group-input">
+                        <input type="radio" name="nose" value="1" id="nose-1" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="2" id="nose-2" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="3" id="nose-3" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="4" id="nose-4" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="5" id="nose-5" class="js-nose-radio-input" checked>
+                        <input type="radio" name="nose" value="6" id="nose-6" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="7" id="nose-7" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="8" id="nose-8" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="9" id="nose-9" class="js-nose-radio-input">
+                        <input type="radio" name="nose" value="10" id="nose-10" class="js-nose-radio-input">
+                    </div>
+                </div>
+                <div class="nose-block__tooltip">
+                    <div class="nose-block__tooltip-min">min</div>
+                    <div class="nose-block__tooltip-max">max</div>
+                </div>
+            </div>
+        </div>
+        <div class="horizontal-filter__right">
+            <button class="js-filter-btn filter-btn"></button>
+            <div class="js-filter-dropdown filter-dropdown">
+                <div class="filter-dropdown__title">Sort by:</div>
+                <div class="filter-dropdown__list">
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--date-new"></span>
+                        Date (New first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--date-new"></span>
+                        Date (Old first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--price-high"></span>
+                        Price (High first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--price-low"></span>
+                        Price (Low first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--thc-high"></span>
+                        Total THC (High first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--thc-low"></span>
+                        Total THC (Low first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--cbd-high"></span>
+                        CBD (High first)
+                    </a>
+
+                    <a href="#" class="filter-dropdown__list-item">
+                        <span class="icon icon--cbd-low"></span>
+                        Total CBD (Low first)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="results">
+        <div class="results__count">
+            1034,5 Results
+        </div>
+        <div class="results__filter js-results-filter">
+
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar-filter">
+            <div class="sidebar-filter-block js-sidebar-filter-block">
+                <div class="sidebar-filter-block__title js-sidebar-filter-block-btn">
+                    Classification
+                </div>
+                <div class="sidebar-filter-block__list js-sidebar-filter-block-list">
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="classifications" value="100% Indica"> 100% Indica
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="classifications" value="100% Sativa"> 100% Sativa
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="classifications" value=">50% Indica"> >50% Indica
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="classifications" value=">50% Sativa"> >50% Sativa
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-filter-block js-sidebar-filter-block">
+                <div class="sidebar-filter-block__title js-sidebar-filter-block-btn">
+                    Production Method
+                </div>
+                <div class="sidebar-filter-block__list js-sidebar-filter-block-list">
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Indoor"> Indoor
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Outdoor"> Outdoor
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Greenhouse"> Greenhouse
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Light Deprivation"> Light Deprivation
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Mixed Light"> Mixed Light
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Production-Method" value="Other"> Other
+                    </label>
+                </div>
+            </div>
+
+            <div class="sidebar-filter-block js-sidebar-filter-block">
+                <div class="sidebar-filter-block__title js-sidebar-filter-block-btn">
+                    Size
+                </div>
+                <div class="sidebar-filter-block__list js-sidebar-filter-block-list">
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Flower"> Flower
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Pre-Roll Flower"> Pre-Roll Flower
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Pre-Roll Infused"> Pre-Roll Infused
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Pre-Roll Leaf"> Pre-Roll Leaf
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Shake"> Shake
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Smalls"> Smalls
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Trim"> Trim
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Shake"> Shake
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Keef"> Keef
+                    </label>
+                    <label class="js-sidebar-filter-checkbox">
+                        <input type="checkbox" name="Size" value="Fresh Frozen"> Fresh Frozen
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-block">
+            Content
+        </div>
+    </div>
+</div>
+
+@@include('../partials/footer.html')
