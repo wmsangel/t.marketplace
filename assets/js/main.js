@@ -1,22 +1,16 @@
 $(function (){
     // Range block
     if ($('.js-noui').length) {
-        $.getScript("assets/js/_range.js", function () {
-            // console.log('Загружаем noui')
-        });
+        $.getScript("assets/js/_range.js", function () {});
     }
 
     // Nose block
     if ($('.js-nose-radio').length) {
-        $.getScript("assets/js/_nose.js", function () {
-            // console.log('Загружаем nose')
-        });
+        $.getScript("assets/js/_nose.js", function () {});
     }
 
     // Filters block
     if ($('.js-filter-btn').length) {
-        $.getScript("assets/js/_filters.js", function () {
-            // console.log('Загружаем filters')
-        });
+        $.getScript("assets/js/_filters.js", function () {});
     }
 })
